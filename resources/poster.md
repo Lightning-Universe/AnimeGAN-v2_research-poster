@@ -3,8 +3,8 @@
 <img src="https://cdn.iconscout.com/icon/free/png-256/openai-1524384-1290687.png" width="100px">
 </div>
 <div style="flex: 0 0 65%; text-align: center;">
-<h1 style="margin-bottom: 10pt;">Demo: CLIP Research Poster</h1>
-<h2>A demo of CLIP research paper using Lightning App</h2>
+<h1 style="margin-bottom: 10pt;">Demo: AnimeGAN v2r</h1>
+<h2>A demo of AnimeGAN research paper using Lightning App</h2>
 </div>
 <div style="flex: 1">
     <div style="display: flex; align-items: center;">
@@ -23,22 +23,20 @@
 
 ## OpenAI introduced a neural network called CLIP which efficiently learns visual concepts from natural language supervision.
 
-This app is a demo
-of [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app) which allows
-authors to build an app to share their everything
-related to their work at a single place.
+This app is a demo of AnimeGANv2 paper
+using [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app) which
+allows authors to build an app to share their everything related to their work at a single place.
 Explore the tabs at the top of this app to view blog, paper, training logs and model demo.
 
-You can fork this app and edit to customize according to your need.
 
-Thanks to [Vivien](https://github.com/vivien000) for building amazing application using
-CLIP [Minimal user-friendly demo of OpenAI's CLIP for semantic image search](https://github.com/vivien000/clip-demo).
+Thanks to [Ahsen Khaliq](https://github.com/AK391) for his open source implementation of AnimeGANv2.
 
-<img src="https://openaiassets.blob.core.windows.net/$web/clip/draft/20210104b/overview-a.svg">
+<img src="https://tachibanayoshino.github.io/AnimeGANv2/assets/AE86.jpg">
 
-CLIP pre-trains an image encoder and a text encoder to predict which images were paired with which texts in our dataset.
-We then use this behavior to turn CLIP into a zero-shot classifier. We convert all of a dataset's classes into captions
-such as "a photo of a dog" and predict the class of the caption CLIP estimates best pairs with a given image.
+AnimeGANv2 propose an improved version of AnimeGAN. It prevents the generation of high-frequency artifacts by
+simply changing the normalization of features in the network. In addition, it further reduce the scale of the
+generator network to achieve more efficient animation style transfer. AnimeGANv2 trained on the newly established
+high-quality dataset can generate animation images with better visual quality than AnimeGAN.
 
 --split--
 
