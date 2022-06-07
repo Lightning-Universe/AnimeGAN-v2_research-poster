@@ -1,42 +1,40 @@
 import logging
 
-import gradio as gr
-from lightning.components.serve import ServeGradio
 from rich.logging import RichHandler
-
-from research_app.clip_demo import CLIPDemo
 
 FORMAT = "%(message)s"
 logging.basicConfig(level="NOTSET", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()])
 
 logger = logging.getLogger(__name__)
 
+from functools import partial
+import gradio as gr
+import torch
+from PIL import Image
+import requests
+from lightning.components.serve import ServeGradio
 
+
+# Credit to @akhaliq for his inspiring work.
+# Find his original code there: https://huggingface.co/spaces/akhaliq/AnimeGANv2/blob/main/app.py
 class ModelDemo(ServeGradio):
-    """Serve model with Gradio UI.
-
-    You need to define i. `build_model` and ii. `predict` method and Lightning `ServeGradio` component will
-    automatically launch the Gradio interface.
-    """
-
-    inputs = gr.inputs.Textbox(default="Doctor Strange Multiverse", label="Search your favourite movie here")
-    outputs = gr.outputs.HTML(label="Fetch Images from <b>themoviedb.org</b>")
+    inputs = gr.inputs.Image(type="pil")
+    outputs = gr.outputs.Image(type="pil")
+    elon = "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg"
+    img = Image.open(requests.get(elon, stream=True).raw)
+    img.save('elon.jpg')
+    # examples = [['elon.jpg']]
 
     def __init__(self):
-        super(ServeGradio, self).__init__(parallel=True)
-        self._model = None
-        self.enable_queue = True
+        super().__init__()
+        self.ready = False
 
-    def build_model(self) -> CLIPDemo:
-        logger.info("loading model...")
-        clip = CLIPDemo()
-        logger.info("built model!")
-        return clip
+    def predict(self, img):
+        return self.model(img=img)
 
-    def predict(self, query: str) -> str:
-        return self.model.predict(query)
-
-
-if __name__ == "__main__":
-    demo = ModelDemo()
-    demo.run()
+    def build_model(self):
+        repo = "AK391/animegan2-pytorch:main"
+        model = torch.hub.load(repo, "generator", device="cpu")
+        face2paint = torch.hub.load(repo, "face2paint", size=512, device="cpu")
+        self.ready = True
+        return partial(face2paint, model=model)

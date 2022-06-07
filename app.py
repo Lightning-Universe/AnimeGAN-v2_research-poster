@@ -45,16 +45,16 @@ class ResearchApp(L.LightningFlow):
     """
 
     def __init__(
-        self,
-        poster_dir: str,
-        paper: Optional[str] = None,
-        blog: Optional[str] = None,
-        github: Optional[str] = None,
-        notebook_path: Optional[str] = None,
-        training_log_url: Optional[str] = None,
-        launch_jupyter_lab: bool = False,
-        launch_gradio: bool = False,
-        tab_order: Optional[List[str]] = None,
+            self,
+            poster_dir: str,
+            paper: Optional[str] = None,
+            blog: Optional[str] = None,
+            github: Optional[str] = None,
+            notebook_path: Optional[str] = None,
+            training_log_url: Optional[str] = None,
+            launch_jupyter_lab: bool = False,
+            launch_gradio: bool = False,
+            tab_order: Optional[List[str]] = None,
     ) -> None:
 
         super().__init__()
@@ -136,19 +136,15 @@ class ResearchApp(L.LightningFlow):
 
 if __name__ == "__main__":
     poster_dir = "resources"
-    paper = "https://arxiv.org/pdf/2103.00020"
-    blog = "https://openai.com/blog/clip/"
-    github = "https://github.com/openai/CLIP"
-    wandb = "https://wandb.ai/cceyda/flax-clip/runs/wlad2c2p?workspace=user-aniketmaurya"
-    tabs = ["Blog", "Paper", "Poster", "Notebook Viewer", "Training Logs", "Model Demo"]
+    paper = "https://arxiv.org/abs/2102.12593"
+    blog = "https://tachibanayoshino.github.io/AnimeGANv2/"
+    tabs = ["Blog", "Paper", "Poster", "Notebook Viewer", "Model Demo"]
 
     app = L.LightningApp(
         ResearchApp(
             poster_dir=poster_dir,
             paper=paper,
             blog=blog,
-            training_log_url=wandb,
-            github=github,
             notebook_path="resources/Interacting_with_CLIP.ipynb",
             launch_jupyter_lab=False,  # don't launch for public app, can expose to security vulnerability
             launch_gradio=True,
