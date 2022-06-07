@@ -19,7 +19,7 @@
 
 --split--
 
-# CLIP: Connecting Text and Images
+# AnimeGANv2
 
 ## OpenAI introduced a neural network called CLIP which efficiently learns visual concepts from natural language supervision.
 
@@ -31,7 +31,8 @@ Explore the tabs at the top of this app to view blog, paper, training logs and m
 
 Thanks to [Ahsen Khaliq](https://github.com/AK391) for his open source implementation of AnimeGANv2.
 
-<img src="https://tachibanayoshino.github.io/AnimeGANv2/assets/AE86.jpg">
+<img src="https://tachibanayoshino.github.io/AnimeGANv2/assets/AnimeGANv2-1.jpg">
+Source: tachibanayoshino 
 
 AnimeGANv2 propose an improved version of AnimeGAN. It prevents the generation of high-frequency artifacts by
 simply changing the normalization of features in the network. In addition, it further reduce the scale of the
