@@ -27,7 +27,7 @@ class ModelDemo(ServeGradio):
     # examples = [['elon.jpg']]
 
     def __init__(self):
-        super().__init__(cloud_compute=L.CloudCompute("gpu", 1))
+        super().__init__()
 
     def predict(self, img):
         return self.model(img=img)
