@@ -21,7 +21,7 @@
 
 # AnimeGANv2
 
-## OpenAI introduced a neural network called CLIP which efficiently learns visual concepts from natural language supervision.
+## AnimeGAN combines neural style transfer and generative adversarial network (GAN) to accomplish this task
 
 This app is a demo of AnimeGANv2 paper
 using [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app) which
