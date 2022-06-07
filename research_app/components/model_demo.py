@@ -27,7 +27,6 @@ class ModelDemo(ServeGradio):
 
     def __init__(self):
         super().__init__()
-        self.ready = False
 
     def predict(self, img):
         return self.model(img=img)
@@ -36,5 +35,4 @@ class ModelDemo(ServeGradio):
         repo = "AK391/animegan2-pytorch:main"
         model = torch.hub.load(repo, "generator", device="cpu")
         face2paint = torch.hub.load(repo, "face2paint", size=512, device="cpu")
-        self.ready = True
         return partial(face2paint, model=model)
