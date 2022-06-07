@@ -3,8 +3,8 @@
 <img src="https://cdn.iconscout.com/icon/free/png-256/openai-1524384-1290687.png" width="100px">
 </div>
 <div style="flex: 0 0 65%; text-align: center;">
-<h1 style="margin-bottom: 10pt;">Demo: AnimeGAN v2r</h1>
-<h2>A demo of AnimeGAN research paper using Lightning App</h2>
+<h1 style="margin-bottom: 10pt;">Demo: AnimeGANv2</h1>
+<h2>A demo of AnimeGANv2 research paper using Lightning App</h2>
 </div>
 <div style="flex: 1">
     <div style="display: flex; align-items: center;">
