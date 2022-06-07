@@ -138,13 +138,15 @@ if __name__ == "__main__":
     poster_dir = "resources"
     paper = "https://arxiv.org/pdf/2102.12593.pdf"
     blog = "https://tachibanayoshino.github.io/AnimeGANv2/"
+    github = "https://github.com/TachibanaYoshino/AnimeGANv2"
 
     app = L.LightningApp(
         ResearchApp(
             poster_dir=poster_dir,
             paper=paper,
+            # github=github,
             blog=blog,
-            # notebook_path="resources/Interacting_with_CLIP.ipynb",
+            notebook_path="resources/demo.ipynb",
             launch_jupyter_lab=False,  # don't launch for public app, can expose to security vulnerability
             launch_gradio=True,
         )
