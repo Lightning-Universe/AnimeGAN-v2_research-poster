@@ -23,7 +23,7 @@ class Poster(LightningWork):
         code_style="github",
         background_color="#F6F6EF",
     ):
-        super().__init__(parallel=True, cloud_compute=L.CloudCompute("cpu", 1))
+        super().__init__(parallel=True, cloud_compute=L.CloudCompute("cpu-small"))
         self.resource_dir = resource_dir
         self.code_style = code_style
         self.background_color = background_color
