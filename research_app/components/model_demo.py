@@ -12,6 +12,7 @@ from lightning.components.serve import ServeGradio
 class ModelDemo(ServeGradio):
     inputs = gr.inputs.Image(type="pil", label="Upload to Animate your photo")
     outputs = gr.outputs.Image(type="pil", label="Animated Output")
+    enable_queue = True
 
     elon = "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg"
     img = Image.open(requests.get(elon, stream=True).raw)
