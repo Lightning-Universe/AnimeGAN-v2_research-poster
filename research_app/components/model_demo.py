@@ -1,4 +1,3 @@
-import logging
 from functools import partial
 
 import gradio as gr
@@ -6,12 +5,6 @@ import requests
 import torch
 from PIL import Image
 from lightning.components.serve import ServeGradio
-from rich.logging import RichHandler
-
-FORMAT = "%(message)s"
-logging.basicConfig(level="NOTSET", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()])
-
-logger = logging.getLogger(__name__)
 
 
 # Credit to @akhaliq for his inspiring work.
@@ -24,7 +17,7 @@ class ModelDemo(ServeGradio):
     img = Image.open(requests.get(elon, stream=True).raw)
     img.save('elon.jpg')
 
-    # examples = [['elon.jpg']]
+    examples = [['elon.jpg']]
 
     def __init__(self):
         super().__init__()
@@ -37,5 +30,4 @@ class ModelDemo(ServeGradio):
         repo = "AK391/animegan2-pytorch:main"
         model = torch.hub.load(repo, "generator", device=device)
         face2paint = torch.hub.load(repo, "face2paint", size=512, device=device)
-        face2paint(img=Image.open("elon.jpg"), model=model)  # warmup
         return partial(face2paint, model=model)
