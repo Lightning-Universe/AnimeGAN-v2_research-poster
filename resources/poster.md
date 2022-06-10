@@ -23,11 +23,10 @@
 
 ## AnimeGAN combines neural style transfer and generative adversarial network (GAN) to accomplish this task
 
-This app is a demo of AnimeGANv2 paper
-using [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app) which
-allows authors to build an app to share their everything related to their work at a single place.
-Explore the tabs at the top of this app to view blog, paper, training logs and model demo.
-
+This app is a research poster demo of AnimeGANv2 paper. It showcasese the paper, blog, noteboo,k and model demo where
+you can upload an image and convert it into Anime.
+To create a research poster for your work
+use the [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app).
 
 Thanks to [Ahsen Khaliq](https://github.com/AK391) for his open source implementation of AnimeGANv2.
 
