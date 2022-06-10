@@ -9,11 +9,11 @@
 <div style="flex: 1">
     <div style="display: flex; align-items: center;">
         <img style="height: 20pt; width: 20pt; margin: 5pt;" src="icons/fontawesome/brands/github.svg">
-        <div style="font-size: 0.9rem; margin-right: 5pt;"><a href="https://github.com/openai/">OpenAI</a></div>
+        <div style="font-size: 0.9rem; margin-right: 5pt;"><a href="https://github.com/pytorchlightning/">Lightning</a></div>
     </div>
     <div style="display: flex; align-items: center;">
         <img style="height: 20pt; width: 20pt; margin: 5pt;" src="icons/fontawesome/brands/twitter.svg">
-        <div style="font-size: 0.9rem;"><a href="https://twitter.com/OpenAI">@OpenAI</a></div>
+        <div style="font-size: 0.9rem;"><a href="https://twitter.com/">@pytorchlightnin</a></div>
     </div>
 </div>
 
