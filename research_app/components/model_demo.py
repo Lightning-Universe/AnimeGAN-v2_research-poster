@@ -4,7 +4,7 @@ import gradio as gr
 import requests
 import torch
 from PIL import Image
-from lightning.components.serve import ServeGradio
+from lightning.app.components.serve import ServeGradio
 
 
 # Credit to @akhaliq for his inspiring work.
