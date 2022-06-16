@@ -64,23 +64,20 @@ graph LR
 ```python
 import lightning as L
 
-paper = "https://arxiv.org/pdf/2103.00020.pdf"
-blog = "https://openai.com/blog/clip/"
-github = "https://github.com/mlfoundations/open_clip"
-wandb = "https://wandb.ai/aniketmaurya/herbarium-2022/runs/2dvwrme5"
-tabs = ["Poster", "Blog", "Paper", "Notebook", "Training Logs", "Model Demo"]
+poster_dir = "resources"
+paper = "https://arxiv.org/pdf/2102.12593.pdf"
+blog = "https://tachibanayoshino.github.io/AnimeGANv2/"
+github = "https://github.com/TachibanaYoshino/AnimeGANv2"
 
 app = L.LightningApp(
     ResearchApp(
-        resource_path="resources",
+        poster_dir=poster_dir,
         paper=paper,
+        # github=github,
         blog=blog,
-        training_log_url=wandb,
-        github=github,
-        notebook_path="resources/Interacting_with_CLIP.ipynb",
-        launch_jupyter_lab=True,
+        notebook_path="resources/demo.ipynb",
         launch_gradio=True,
-        tab_order=tabs,
+        launch_jupyter_lab=False,  # don't launch for public app, can expose to security vulnerability
     )
 )
 ```
