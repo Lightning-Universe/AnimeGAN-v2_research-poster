@@ -24,7 +24,7 @@ class StaticNotebookViewer(L.LightningFlow):
         self.serve_dir = notebook_to_html(notebook_path)
 
     def configure_layout(self):
-        return frontend.web.StaticWebFrontend(serve_dir=self.serve_dir)
+        return frontend.StaticWebFrontend(serve_dir=self.serve_dir)
 
 
 class ResearchApp(L.LightningFlow):
