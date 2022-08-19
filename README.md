@@ -5,6 +5,13 @@ you can upload an image and convert it into Anime.
 To create a research poster for your work
 use the [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app).
 
+**Important Links:**
+* [Paper](https://link.springer.com/chapter/10.1007/978-981-15-5577-0_18)
+* [Github official](https://github.com/TachibanaYoshino/AnimeGAN)
+* [Github PyTorch Implementation](https://github.com/bryandlee/animegan2-pytorch)
+* [Blog](https://tachibanayoshino.github.io/AnimeGANv2/)
+* [Colab Notebook](https://drive.google.com/file/d/1PbBkmj1EhULvEE8AXr2z84pZ2DQJN4hc/view?usp=sharing)
+
 ## Getting started
 
 To create a Research Poster you can install this app via the [Lightning CLI](https://lightning.ai/lightning-docs/) or
@@ -17,12 +24,6 @@ manually install the app as mentioned below.
 
 `lightning install app lightning/anime-converter`
 
-#### Use GitHub template
-
-Click on the "Use this template" button at the top, name your app repo, and GitHub will create a fork of this app to
-your account.
-
-> ![use-template.png](./assets/use-template.png)
 
 Once you have installed the app, you can goto the `research-poster-animeganv2` folder and
 run `lightning run app app.py --cloud` from terminal.
