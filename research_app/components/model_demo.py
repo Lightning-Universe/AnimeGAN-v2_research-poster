@@ -5,6 +5,7 @@ import requests
 import torch
 from PIL import Image
 from lightning.app.components.serve import ServeGradio
+import io
 
 
 # Credit to @akhaliq for his inspiring work.
@@ -15,7 +16,8 @@ class ModelDemo(ServeGradio):
     enable_queue = True
 
     elon = "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg"
-    img = Image.open(requests.get(elon, stream=True).raw)
+    r = requests.get(elon, stream=True)
+    img = Image.open(io.BytesIO(r.content))
     img.save('elon.jpg')
 
     examples = [['elon.jpg']]
