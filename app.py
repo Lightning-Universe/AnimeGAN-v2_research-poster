@@ -46,16 +46,16 @@ class ResearchApp(L.LightningFlow):
     """
 
     def __init__(
-            self,
-            poster_dir: str,
-            paper: Optional[str] = None,
-            blog: Optional[str] = None,
-            github: Optional[str] = None,
-            notebook_path: Optional[str] = None,
-            training_log_url: Optional[str] = None,
-            launch_jupyter_lab: bool = False,
-            launch_gradio: bool = False,
-            tab_order: Optional[List[str]] = None,
+        self,
+        poster_dir: str,
+        paper: Optional[str] = None,
+        blog: Optional[str] = None,
+        github: Optional[str] = None,
+        notebook_path: Optional[str] = None,
+        training_log_url: Optional[str] = None,
+        launch_jupyter_lab: bool = False,
+        launch_gradio: bool = False,
+        tab_order: Optional[List[str]] = None,
     ) -> None:
 
         super().__init__()

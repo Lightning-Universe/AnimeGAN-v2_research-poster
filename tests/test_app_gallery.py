@@ -132,8 +132,8 @@ def clone_and_run_from_gallery_app_page(app_gallery_page) -> Generator:
             app_page.wait_for_load_state(timeout=0)
             break
         except (
-                playwright._impl._api_types.Error,
-                playwright._impl._api_types.TimeoutError,
+            playwright._impl._api_types.Error,
+            playwright._impl._api_types.TimeoutError,
         ):
             pass
 
@@ -159,8 +159,8 @@ def clone_and_run_from_gallery_app_page(app_gallery_page) -> Generator:
             stop_button.wait_for(timeout=3 * 1000)
             stop_button.click()
         except (
-                playwright._impl._api_types.Error,
-                playwright._impl._api_types.TimeoutError,
+            playwright._impl._api_types.Error,
+            playwright._impl._api_types.TimeoutError,
         ):
             pass
 
@@ -185,12 +185,14 @@ def validate_app_functionalities(app_page: "Page") -> None:
         try:
             app_page.reload()
             sleep(5)
-            app_label = app_page.frame_locator("iframe").locator("text=A demo of AnimeGANv2 research paper using Lightning App")
+            app_label = app_page.frame_locator("iframe").locator(
+                "text=A demo of AnimeGANv2 research paper using Lightning App"
+            )
             app_label.wait_for(timeout=30 * 1000)
             break
         except (
-                playwright._impl._api_types.Error,
-                playwright._impl._api_types.TimeoutError,
+            playwright._impl._api_types.Error,
+            playwright._impl._api_types.TimeoutError,
         ):
             pass
 

@@ -1,12 +1,12 @@
+import io
+import urllib.request
 from functools import partial
 
 import gradio as gr
 import requests
 import torch
-from PIL import Image
 from lightning.app.components.serve import ServeGradio
-import io
-import urllib.request
+from PIL import Image
 
 
 # Credit to @akhaliq for his inspiring work.
@@ -16,7 +16,7 @@ class ModelDemo(ServeGradio):
     outputs = gr.outputs.Image(type="pil", label="Animated Output")
     enable_queue = True
 
-    examples = [['elon.jpg']]
+    examples = [["elon.jpg"]]
 
     def __init__(self):
         super().__init__()
