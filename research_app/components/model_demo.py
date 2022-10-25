@@ -20,7 +20,7 @@ class ModelDemo(ServeGradio):
     img = Image.open(io.BytesIO(r.content))
     img.save('elon.jpg')
 
-    examples = [['elon.jpg']]
+    # examples = [['elon.jpg']]
 
     def __init__(self):
         super().__init__()
