@@ -6,11 +6,12 @@ To create a research poster for your work
 use the [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app).
 
 **Important Links:**
-* [Paper](https://link.springer.com/chapter/10.1007/978-981-15-5577-0_18)
-* [Github official](https://github.com/TachibanaYoshino/AnimeGAN)
-* [Github PyTorch Implementation](https://github.com/bryandlee/animegan2-pytorch)
-* [Blog](https://tachibanayoshino.github.io/AnimeGANv2/)
-* [Colab Notebook](https://drive.google.com/file/d/1PbBkmj1EhULvEE8AXr2z84pZ2DQJN4hc/view?usp=sharing)
+
+- [Paper](https://link.springer.com/chapter/10.1007/978-981-15-5577-0_18)
+- [Github official](https://github.com/TachibanaYoshino/AnimeGAN)
+- [Github PyTorch Implementation](https://github.com/bryandlee/animegan2-pytorch)
+- [Blog](https://tachibanayoshino.github.io/AnimeGANv2/)
+- [Colab Notebook](https://drive.google.com/file/d/1PbBkmj1EhULvEE8AXr2z84pZ2DQJN4hc/view?usp=sharing)
 
 ## Getting started
 
@@ -23,7 +24,6 @@ manually install the app as mentioned below.
 #### With Lightning CLI
 
 `lightning install app lightning/anime-converter`
-
 
 Once you have installed the app, you can goto the `research-poster-animeganv2` folder and
 run `lightning run app app.py --cloud` from terminal.
