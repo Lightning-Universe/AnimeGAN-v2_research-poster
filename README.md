@@ -1,6 +1,6 @@
 # ⚡️ Anime Converter (AnimeGANV2 research poster)
 
-This app is a research poster demo of AnimeGANv2 paper. It showcasese the paper, blog, noteboo,k and model demo where
+This app is a research poster demo of AnimeGANv2 paper. It showcasese the paper, blog, notebook and model demo where
 you can upload an image and convert it into Anime.
 To create a research poster for your work
 use the [Lightning Research Template app](https://github.com/PyTorchLightning/lightning-template-research-app).
