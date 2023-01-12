@@ -31,7 +31,7 @@ use the [Lightning Research Template app](https://github.com/PyTorchLightning/li
 Thanks to [Ahsen Khaliq](https://github.com/AK391) for his open source implementation of AnimeGANv2.
 
 <img src="https://tachibanayoshino.github.io/AnimeGANv2/assets/AnimeGANv2-1.jpg">
-Source: tachibanayoshino 
+Source: tachibanayoshino
 
 AnimeGANv2 propose an improved version of AnimeGAN. It prevents the generation of high-frequency artifacts by
 simply changing the normalization of features in the network. In addition, it further reduce the scale of the
