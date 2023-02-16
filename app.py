@@ -6,7 +6,7 @@ import lightning as L
 from lightning.app import frontend
 from poster import Poster
 from research_app.components.jupyter_notebook import JupyterLab
-from research_app.components.model_demo import ModelDemo
+from research_app.demo.model import ModelDemo
 from research_app.utils import clone_repo, notebook_to_html
 from rich import print
 from rich.logging import RichHandler
