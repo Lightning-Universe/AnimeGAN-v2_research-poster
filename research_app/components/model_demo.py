@@ -1,12 +1,9 @@
-import io
 import urllib.request
 from functools import partial
 
 import gradio as gr
-import requests
 import torch
 from lightning.app.components.serve import ServeGradio
-from PIL import Image
 
 
 # Credit to @akhaliq for his inspiring work.
