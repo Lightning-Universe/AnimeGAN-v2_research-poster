@@ -8,5 +8,5 @@ gradio==2.9.4
 nbconvert==6.5.0
 jupyterlite==0.1.0b7
 lightning==1.8.*
-jupyterlab==3.3.3
+jupyterlab==3.6.1
 Pillow==9.1.1
